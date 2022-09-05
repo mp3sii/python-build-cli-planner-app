@@ -63,3 +63,7 @@ typings/
 
 # next.js build output
 .next
+
+.idea/
+__pychache__/
+src/__pycache__/
