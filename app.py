@@ -1,25 +1,22 @@
 from src.database import add_reminder, list_reminders
-from src.deadlined_reminders import DateReminder
+from src.external_reminders import EveningReminder
 
 
 def handle_input():
     choice = input("Choice: ")
     if choice == "3":
         return False
-
-    if(choice == "1"):
+    if choice == "1":
         list_reminders()
-
-    elif(choice == "2"):
+    elif choice == "2":
         print()
         reminder = input("What would you like to be reminded about?: ")
         date = input("When is that due?: ")
 
-        add_reminder(reminder, date, DateReminder)
+        add_reminder(reminder, date, EveningReminder)
         list_reminders()
     else:
         print("Invalid menu option")
-
     return True
 
 
